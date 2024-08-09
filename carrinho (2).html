@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<div id="itens"> </div>
+<div>Total: <span id="total"></span> </div>
+
+<script>
+ var total = 0; // variável que retorna o total dos produtos que estão na LocalStorage.
+ var i = 0;     // variável que irá percorrer as posições
+ var valor = 0; // variável que irá receber o preço do produto convertido em Float.
+ 
+ for(i=1; i<=99; i++) // verifica até 99 produtos registrados na localStorage
+ {
+	 var prod = localStorage.getItem("produto" + i + ""); // verifica se há recheio nesta posição. 
+	 if(prod != null) 
+	 {	
+		 // exibe os dados da lista dentro da div itens
+		 document.getElementById("itens").innerHTML += localStorage.getItem("qtd" + i) + " x ";
+		 document.getElementById("itens").innerHTML += localStorage.getItem("produto" + i);
+		 document.getElementById("itens").innerHTML += " ";
+		 document.getElementById("itens").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";
+		 
+		 // calcula o total dos recheios
+		 valor = parseFloat(localStorage.getItem("valor" + i)); // valor convertido com o parseFloat()
+		 total = (total + valor); // arredonda para 2 casas decimais com o .toFixed(2)
+	 }
+ } 
+ // exibe o total dos recheios
+ document.getElementById("total").innerHTML = total.toFixed(2); 
+</script>
+
+<button type="button" onclick=" localStorage.clear(); location.reload();"> Esvaziar carrinho </button>
+<style>
+    .button {
+      display: inline-block;
+      border: 2px solid #000000;
+      padding: 1px 16px;
+      border-radius: 10px;
+      color: #454545;
+      text-decoration: none;
+      margin-top: 3px;
+    }
+    </style>
+<div style="flex:1 1 400px;width: 200px;height:40px;">
+    <p style="font-weight: bold;"></p>
+    <p> <a class="button" href="produtos.html"> Voltar</a></p>
+  </div> 
+</div>
+<footer>
+    <P style="height:120px; background-color: #151616;color: rgb(255, 255, 255); font: size 10px; padding: 10px;text-align:center;margin-top:50px;">Informações de contato </br><a href="https://www.sephora.com.br" 
+      style="text-decoration: none;color: rgb(255, 255, 255);">Site: www.eautheparfum.com.br</a></br>Instagram</a></P>
+  </footer> 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>212 vip black</title>
+</head>
+</style>
+<body>
+<style>
+    .button {
+      display: inline-block;
+      border: 2px solid #000000;
+      padding: 1px 16px;
+      border-radius: 10px;
+      color: #454545;
+      text-decoration: none;
+      margin-top: 3px;
+    }
+  
+    </style>
+<div class="212VIP">
+    <h1 style="font-family:geneva">212 Vip Black </h1>
+    <br>
+    <img src="212black.jpeg" alt="vip black" style="width:300px;height:300px;">    
+    <h2 style="font-family:sans-serif">R$ 800,00</h2>
+    <h3 style="color:rgb(87, 84, 84)"> 6x de 133,33 sem juros</h3>
+</div>
+<div>
+<h2 style="font-family: monospace;">212 VIP Black é o centro das atenções, todos os olhares se voltam para ele. É sensual e viciante: uma aura elegante que lhe permite conquistar a festa.
+</h2>
+</div>
+<div style="flex:1 1 400px;width: 200px;height:40px;">
+    <p style="font-weight: bold;"></p>
+    <p> <a class="button" href="carrinho (2).html"> Ver carrinho</a></p>
+  </div> 
+</div> 
+<div style="flex:1 1 200px;">
+  <p style="font-weight: bold;"></p>
+  <p> <a class="button" href="produtos.html"> Voltar</a></p>
+</div> 
+<script>
+    function AddCarrinho(produto, qtd, valor, posicao)
+    {
+      localStorage.setItem("produto" + posicao, produto);
+      localStorage.setItem("qtd" + posicao, qtd);
+      valor = valor * qtd;
+      localStorage.setItem("valor" + posicao, valor);
+      alert("Produto adicionado ao carrinho!");
+    }
+  </script>
+  <div align="center">
+    <strong>R$800,00</strong><br>
+   qtd: <input type="number" value="1" min="1" max="10" id="qtd1">
+   <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('212 vip black', document.getElementById('qtd1').value, '800.00', 1)"> Comprar </button>
+ </div>
+ <footer>
+    <P style="height:120px; background-color: #151616;color: rgb(255, 255, 255); font: size 10px; padding: 10px;text-align:center;margin-top:50px;">Informações de contato </br><a href="https://www.sephora.com.br" 
+      style="text-decoration: none;color: rgb(255, 255, 255);">Site: www.eautheparfum.com.br</a></br>Instagram</a></P>
+  </footer>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phantom</title>
+</head>
+<body>
+    <style>
+        .button {
+          display: inline-block;
+          border: 2px solid #000000;
+          padding: 1px 16px;
+          border-radius: 10px;
+          color: #454545;
+          text-decoration: none;
+          margin-top: 3px;
+        }
+      
+        </style>
+<div class="phanton paco rabane">
+    <h1>Phantom Paco rabane 100ml</h1>
+    <br>
+    <img src="phantom.jpeg" alt="phantom" style="width:250px;height:250px;">
+    <h2 style="font-family:sans-serif">R$679,99</h2>
+    <h3 style="color:grey">6x de 133,99 sem juros</h3>
+</div>
+<h2 style="font-family: monospace,"> o perfume masculino de Paco Rabanne, une o melhor da perfumaria internacional com a tecnologia. Essa é a fragrância inovadora que vai transportá-lo para o futuro da autoconfiança e das boas energias.</h2>
+<div style="flex:1 1 400px;width: 200px;height:40px;">
+    <p style="font-weight: bold;"></p>
+    <p> <a class="button" href="carrinho (2).html"> Ver carrinho</a></p>
+  </div> 
+  <div style="flex:1 1 200px;">
+    <p style="font-weight: bold;"></p>
+    <p> <a class="button" href="produtos.html"> Voltar</a></p>
+  </div> 
+<script>
+    function AddCarrinho(produto, qtd, valor, posicao)
+    {
+      localStorage.setItem("produto" + posicao, produto);
+      localStorage.setItem("qtd" + posicao, qtd);
+      valor = valor * qtd;
+      localStorage.setItem("valor" + posicao, valor);
+      alert("Produto adicionado ao carrinho!");
+    }
+  </script>
+  <div align="center">
+    <strong>R$679,99</strong><br>
+   qtd: <input type="number" value="1" min="1" max="10" id="qtd2">
+   <button type="button" id="adicionar2" id="produto2" onclick="AddCarrinho('Phantom', document.getElementById('qtd2').value, '679.99', 2)"> Comprar </button>
+ </div>
+ <footer>
+    <P style="height:120px; background-color: #151616;color: rgb(255, 255, 255); font: size 10px; padding: 10px;text-align:center;margin-top:50px;">Informações de contato </br><a href="https://www.sephora.com.br" 
+      style="text-decoration: none;color: rgb(255, 255, 255);">Site: www.eautheparfum.com.br</a></br>Instagram</a></P>
+  </footer> 
+</body>
+</html>
+    
